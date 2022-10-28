@@ -1,0 +1,23 @@
+{
+  "name": "linkedlist_jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "linkedlist.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonHernandez-Ksquare/LinkedList_Jest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonHernandez-Ksquare/LinkedList_Jest/issues"
+  },
+  "homepage": "https://github.com/BrandonHernandez-Ksquare/LinkedList_Jest#readme",
+  "devDependencies": {
+    "jest": "^29.2.2"
+  }
+}
