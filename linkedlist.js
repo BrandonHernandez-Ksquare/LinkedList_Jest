@@ -158,41 +158,24 @@ class linkedlist {
 
 
     // Sort Method
-    sortList() {
-        let aux;
-        let i = this.size;
-        while (i > 0) {
-            let current = this.head;
-            while (current.next != null) {
-                if (current.data > current.next.data) {
-                    aux = current.data;
-                    current.data = current.next.data;
-                    current.next.data = aux
-                }
-                current = current.next
-            }
-            i -= 1;
+    orderList(){
+        var curr = this.head;
+        let array = []
+        while (curr) {
+            array.push(curr.data) //we store the values 
+            curr = curr.next; //of the linkedlist as if they were an array and order it
         }
+        return array.sort(function(a, b){return b - a});
     }
 
-    orderList() {
-        let current = this.head;
-        let array = [];
-        while (current) {
-            array.push(current.data)
-            current = current.next;
+    reverseList(){
+        var curr = this.head;
+        let array = []
+        while (curr) {
+            array.push(curr.data) //we store the values as an array
+            curr = curr.next;
         }
-        return array.sort(function(a,b){return b -a});
-    }
-
-    invertList(){
-        let current = this.head;
-        let array = [];
-        while(current) {
-            array.push(current.data)
-            current = current.next;
-        }
-        return array.reverse();
+        return array.reverse(); //use the reverse method
     }
     
     printList() {

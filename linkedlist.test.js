@@ -57,5 +57,24 @@ describe("testing with linked list", () => {
         expect(list.printList()).toEqual('50->110->90->null');
     })
 
+    it ("Sort the list and validate that the order (high-low)", () => {
+        expect(list.orderList).toBeDefined();
+        expect(list.addToHead(10).data).toEqual(10);
+        expect(list.addToTail(1).data).toEqual(1);
+        expect(list.addToTail(5).data).toEqual(5);
+        expect(list.orderList()).not.toEqual([1,5,10,10,50,90,110])
+        expect(list.orderList()).toEqual([110,90,50,10,10,5,1])
+    })
+
+    it ("Reverse the list and validate the order", () => {
+        expect(list.reverseList).toBeDefined();
+        expect(list.addToHead(10).data).toEqual(10);
+        expect(list.addToTail(1).data).toEqual(1);
+        expect(list.addToTail(4).data).toEqual(4);
+        expect(list.addToTail(-100).data).toEqual(-100);
+        expect(list.reverseList()).not.toEqual([10,50,110,90,10,1,4,-100])
+        expect(list.reverseList()).toEqual([-100,4,1,90,10,110,50,10])
+
+    })
 
 })
